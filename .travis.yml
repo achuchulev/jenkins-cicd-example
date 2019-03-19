@@ -12,14 +12,13 @@ addons:
     - ruby
     - ruby-dev
 install:
-- sudo gem install inspec
-- sudo bash -x scripts/provision.sh
-- pushd ops
-- sudo gem install bundler
-- bundle install
-- popd
+    - sudo gem install inspec
+    - sudo bash -x scripts/provision.sh
+    - pushd ops
+    - sudo gem install bundler
+    - bundle install
+    - popd
 script:
-script:
-- pushd ops
-- inspec exec test/integration/default/
-- popd
+    - pushd ops
+    - inspec exec test/integration/default/
+    - popd
