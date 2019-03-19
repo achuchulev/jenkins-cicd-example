@@ -1,4 +1,4 @@
-# Sample usage of Travis for CI testing and Jenkins pipeline for deployment
+# Example usage of Travis for CI testing and Jenkins pipeline for deployment
 [![Build Status](https://travis-ci.org/achuchulev/jenkins-cicd-example.svg?branch=master)](https://travis-ci.org/achuchulev/jenkins-cicd-example)
 
 ## How it works
