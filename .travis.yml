@@ -1,0 +1,24 @@
+language: python
+dist: xenial
+sudo: required
+cache:
+- apt
+addons:
+  apt:
+    packages:
+    - nginx
+    - curl
+    - wget
+    - ruby
+    - ruby-dev
+install:
+    - sudo gem install inspec
+    - sudo bash -x scripts/provision.sh
+    - pushd ops
+    - sudo gem install bundler
+    - bundle install
+    - popd
+script:
+    - pushd ops
+    - inspec exec test/integration/default/
+    - popd
