@@ -11,5 +11,15 @@ addons:
     - wget
     - ruby
     - ruby-dev
+install:
+- sudo gem install inspec
+- sudo bash -x scripts/provision.sh
+- pushd ops
+- sudo gem install bundler
+- bundle install
+- popd
 script:
-- packer validate template.json
+script:
+- pushd ops
+- inspec exec test/integration/default/
+- popd
