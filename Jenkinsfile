@@ -1,4 +1,7 @@
 node {
+    stage('SCM Checkout'){
+        git 'https://github.com/achuchulev/jenkins-cicd-example.git'
+    }
     stage('Approve deployment on QA'){
         input "Deploy to QA?"
     }
