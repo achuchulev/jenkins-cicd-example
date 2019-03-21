@@ -1,10 +1,8 @@
-pipeline {
-	agent any
-    
-    stages {
-	      stage('Approve deployment on QA'){
-            input "Deploy to QA?"
-        }
+node { 
+   stages {
+	stage('Approve deployment on QA'){
+       		input "Deploy to QA?"
+       	}
         stage('Deploing to QA') {
             script {
                 sshPublisher(
