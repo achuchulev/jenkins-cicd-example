@@ -9,8 +9,10 @@
 <img src="diagrams/Screenshot 2019-03-21 at 11.22.45.png" />
 
 On stage:
+```
 1 - Fetching changes from the remote Git repository
 2 - Approve Deploy to QA
 3 - Website content is being applied on QA server
 4 - Approve Deploy to PROD
 5 - Website content is being applied on PROD server
+```
